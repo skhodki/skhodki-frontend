@@ -1,4 +1,4 @@
-# Сходки #
+# Сходки frontend #
 
 A MeetUp-like app for Russian users.
 
