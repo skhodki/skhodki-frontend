@@ -1,0 +1,46 @@
+
+form {
+  --width: 12rem;
+  position: relative;
+  width: var(--width);
+  font-size: 18px;
+  
+  label {
+    display: block;
+    margin-top: 0.5em;
+    width: 10em;
+
+    & span::after {
+      content: ": "
+    }
+
+    input,
+    textarea,
+    select,
+    .react-calendar {
+      width: var(--width);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  label.no-colon span {
+    position: relative;
+    top: 0.5em;
+
+    &::after {
+      content: ""
+    }
+  }
+
+  .react-calendar__tile--active {
+    background-color: #900;
+  }
+
+  button.primary {
+    margin-top: 1em;
+    width: 100%;
+  }
+}

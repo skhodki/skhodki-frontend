@@ -1,0 +1,65 @@
+:root {
+  --gap: 0.5em;
+  --primary: #060;
+  --primary-border: #393;
+  --primary-active: #030;
+}
+
+/* BUTTONS / BUTTONS / BUTTONS / BUTTONS / BUTTONS / BUTTONS */
+
+div.buttons {
+  display: flex;
+  justify-content: space-between;
+
+  & button {
+    flex: 1
+  }
+
+  & .primary {
+    /* margin-left: 0.5em; */
+    flex: 2
+  }
+
+  & button,
+  & .button {
+    border: 1px outset var(--mid);
+    border-radius: var(--gap);
+    padding: var(--gap);
+    pointer-events: none;
+  }
+
+  & button:not(:disabled),
+  & .button:not(:disabled) {
+    pointer-events: all;
+    cursor: pointer;
+  }
+
+  & button:hover,
+  & .button:hover {
+    color: #fff;
+  }
+
+  & button:hover:active,
+  & .button:hover:active {
+    border-style: inset;
+    background-color: #000;
+  }
+
+  & button.pressed,
+  & .button.pressed {
+    color: #fff;
+    border-style: inset;
+    background-color: #000;
+  }
+
+  & button.primary,
+  & .button.primary {
+    background-color: var(--primary);
+    border-color: var(--primary-border);
+  }
+
+  & button.primary:active:hover,
+  & .button.primary:active:hover {
+    background-color: var(--primary-active);
+  }
+}
